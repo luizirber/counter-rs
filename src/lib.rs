@@ -122,6 +122,12 @@
 #[macro_use]
 extern crate maplit;
 
+#[cfg(feature = "rayon")]
+extern crate rayon;
+
+#[cfg(feature = "rayon")]
+pub mod rayon_iters;
+
 extern crate num_traits;
 use num_traits::{One, Zero};
 
